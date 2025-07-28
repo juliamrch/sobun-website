@@ -14,6 +14,9 @@ export default defineConfig({
         "@components": "/src/components",
       },
     },
+    server: {
+      allowedHosts: process.env.ALLOWED_HOSTS ? process.env.ALLOWED_HOSTS.split(',') : ["localhost"],
+    },
   },
   output: "static",
   build: {
